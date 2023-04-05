@@ -9,4 +9,6 @@ public interface CustomerRepository extends MongoRepository<Customer,Integer> {
     public List<Customer> findBySamsung(String samsung);
 
     List<Customer> getAllCustomer(String customerName);
+
+    List<Customer> getCustomerByproductName(String prod_name, String prod_name2);
 }

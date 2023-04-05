@@ -7,8 +7,18 @@ import com.example.customer.exception.CustomerNotFound;
 import java.util.List;
 
 public interface ICustomerService {
-    public Customer addCustomer(Customer customer) throws CustomerAlreadyExists;
-    public boolean deleteCustomer(int id) throws CustomerNotFound;
-    public List<Customer> getCustBySamsung(String customerName)  throws CustomerAlreadyExists ;
-    public List<Customer> getAllCustomer(String customerName)  throws CustomerAlreadyExists;
-}
+
+
+        public Customer addCustomer(Customer customer) throws CustomerAlreadyExists;
+
+        public List<Customer> getCustomer();
+
+        public Customer getCustomerById(int id) throws CustomerNotFound;
+
+        public Customer updateCustomer(Customer customer, int id) throws CustomerNotFound;
+
+        public boolean deleteById(Integer id) throws CustomerNotFound;
+
+        public List<Customer> getCustomerByProductName(String prod_name, String prod_Name1);
+    }
+
